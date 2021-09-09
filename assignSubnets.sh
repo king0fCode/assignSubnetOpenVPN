@@ -35,7 +35,7 @@ echo  $ip
 echo  $subnetCDR
 
 #Add a new user from scratch:
-./sacli --user $iuser --key "type" --value "user_connect" UserPropPut
+#./sacli --user $iuser --key "type" --value "user_connect" UserPropPut
 
 
 
@@ -45,28 +45,33 @@ then
 
 
 #Create a new group from scratch:
-./sacli --user $GroupName --key "type" --value "group" UserPropPut
-./sacli --user $GroupName --key "group_declare" --value "true" UserPropPut
+#./sacli --user $GroupName --key "type" --value "group" UserPropPut
+#./sacli --user $GroupName --key "group_declare" --value "true" UserPropPut
 
 # Assign a primary subnet for static IP addressing space to a group:
-./sacli --user $GroupName --key $GroupSubnetName --value $subnetCDR UserPropPut
+#./sacli --user $GroupName --key $GroupSubnetName --value $subnetCDR UserPropPut
 
 fi
 
 
 #Add a user to a group:
-./sacli --user $iuser --key "conn_group" --value  $GroupName UserPropPut
+#./sacli --user $iuser --key "conn_group" --value  $GroupName UserPropPut
 
 
 # Assign a user a static IP address:
-./sacli --user $iuser --key "conn_ip" --value $ip UserPropPut
+#./sacli --user $iuser --key "conn_ip" --value $ip UserPropPut
+
+
+./sacli --user $iuser UserPropDelAll
 
 
 i=$((i+1))
 
 
 
+
 done < <(paste $users $ipList)
+
 
 
 
