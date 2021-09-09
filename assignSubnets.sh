@@ -62,7 +62,7 @@ fi
 #./sacli --user $iuser --key "conn_ip" --value $ip UserPropPut
 
 
-./sacli --user $iuser UserPropDelAll
+./sacli --user $GroupName UserPropDelAll
 
 
 i=$((i+1))
