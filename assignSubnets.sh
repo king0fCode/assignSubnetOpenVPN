@@ -4,7 +4,7 @@
 # start predfined values 
 CIDR=29
 NetworkAddress=173.82.43.72
-users="/users.txt"
+users="./users.txt"
 ipList="./ips.txt"
 GroupName="ClientGroup" 
 # end predfined values
