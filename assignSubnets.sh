@@ -18,7 +18,7 @@ echo "users path"$users;
 echo "IPs path "$ipList;
 
 
-i=1; # Count variable to cal IP Range 
+#i=1; # Count variable to cal IP Range 
 
 # Read user and password
 while read iuser ip; do
