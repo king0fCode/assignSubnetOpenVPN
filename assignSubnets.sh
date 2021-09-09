@@ -2,7 +2,7 @@
 
 
 # start predfined values 
-GroupSubnetName="Subnet_173.82.43.72_S.29"
+GroupSubnetName="Subnet_216.240.154.0_S.25"
 CIDR=29
 NetworkAddress=173.82.43.72
 # end predfined values
@@ -17,7 +17,7 @@ subnetCDR=$NetworkAddress"/"$CIDR
 echo "users path"$users;
 echo "IPs path "$ipList;
 
-GroupName="Subnet_173.82.43.72_S.29"
+GroupName="Subnet_216.240.154.0_S.25"
 
 ./sacli --user $GroupName UserPropDelAll
 #@ Remove all properties (this deletes the user or group):
