@@ -17,6 +17,11 @@ subnetCDR=$NetworkAddress"/"$CIDR
 echo "users path"$users;
 echo "IPs path "$ipList;
 
+GroupName="G_E74"
+./sacli --user $GroupName UserPropDelAll
+#@ Remove all properties (this deletes the user or group):
+
+
 
 #i=1; # Count variable to cal IP Range 
 
@@ -24,7 +29,8 @@ echo "IPs path "$ipList;
 while read iuser ip; do
 
 
-GroupName="G_E74"
+
+
 echo "-------------"
 echo $i
 echo "Assigning Static IP"
@@ -62,7 +68,6 @@ fi
 #./sacli --user $iuser --key "conn_ip" --value $ip UserPropPut
 
 
-./sacli --user $GroupName UserPropDelAll
 
 
 i=$((i+1))
