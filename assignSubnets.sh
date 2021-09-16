@@ -3,9 +3,9 @@
 
 # start predfined values 
 
-users="./users3.txt"
-ipList="./ips3.txt"
-GroupName="ClientGroup3" 
+users="./users.txt"
+ipList="./ips.txt"
+GroupName="ClientGroup" 
 # end predfined values
 
 # NOTE: Be sure to run this script with `sudo`.
@@ -36,16 +36,16 @@ echo  $ip
 
 
 #Add a new user from scratch:
-./sacli --user $iuser --key "type" --value "user_connect" UserPropPut
+/usr/local/openvpn_as/scripts/sacli --user $iuser --key "type" --value "user_connect" UserPropPut
 
 
 
 #Add a user to a group:
-./sacli --user $iuser --key "conn_group" --value  $GroupName UserPropPut
+/usr/local/openvpn_as/scripts/sacli --user $iuser --key "conn_group" --value  $GroupName UserPropPut
 
 
 # Assign a user a static IP address:
-./sacli --user $iuser --key "conn_ip" --value $ip UserPropPut
+/usr/local/openvpn_as/scripts/sacli --user $iuser --key "conn_ip" --value $ip UserPropPut
 
 
 i=$((i+1))
