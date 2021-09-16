@@ -3,9 +3,9 @@
 
 # start predfined values 
 
-users="./users.txt"
-ipList="./ips.txt"
-GroupName="ClientGroup" 
+users="./users2.txt"
+ipList="./ips2.txt"
+GroupName="ClientGroup2" 
 # end predfined values
 
 # NOTE: Be sure to run this script with `sudo`.
